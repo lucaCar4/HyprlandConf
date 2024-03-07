@@ -1,0 +1,6 @@
+(defpoll battery_up :interval "60s" `bash /home/luca/.config/eww/scripts/bar/battery_perc.sh`)
+(defpoll battery_logo_up :interval "60s" `bash /home/luca/.config/eww/scripts/bar/battery_logo.sh`)
+(defwidget battery []
+    (box :class "module" :space-evenly "true" :orientation "h" :spacing "3"
+        (label :text "${battery_logo_up} ${battery_up}" :class "battery")
+        ))

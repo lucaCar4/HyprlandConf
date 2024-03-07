@@ -1,0 +1,22 @@
+(include "widgets/reload/revealer.yuck")
+(defvar revealPower false)
+(defwidget powermenu [?class]
+    (box :space-evenly false
+        :class "hover"
+        (revealer-on-hover :class "hl-on"
+            :var revealPower
+            :varname "revealPower"
+            :transition "slideup"
+            :class "revealPower"
+            (hovered-sign :var revealPower :transition "slideup"
+            
+            )
+        (box :orientation "v" :space-evenly "true" :spacing "4" :class "powermenu"
+            (button :class "powermenu_button" :halign "center" :valign "center" :onclick "reboot"
+                (label :text "" :class "powermenu_label_restart"))
+            (button :class "powermenu_button" :halign "center" :valign "center" :onclick "poweroff"
+                (label :text "󰐥" :class "powermenu_label_poweroff")))
+        )  
+    )
+)
+    

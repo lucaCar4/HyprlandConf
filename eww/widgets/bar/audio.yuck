@@ -1,0 +1,9 @@
+(defpoll audio_up :interval "200ms" `bash /home/luca/.config/eww/scripts/bar/audio.sh`)
+(defpoll audio_logo_up :interval "200ms" `bash /home/luca/.config/eww/scripts/bar/audio_logo.sh`)
+(defpoll monitor_up :interval "10s" '/home/luca/.config/eww/scripts/monitor.sh')
+(defwidget audio []
+    (box :class "module" :space-evenly "true" :orientation "h" :spacing "3"
+        (label :text "${audio_logo_up} ${audio_up} ${monitor_up}" :class "audio")
+        ;(label :text audio_up :class "audio" )4
+    ))
+            

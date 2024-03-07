@@ -1,0 +1,33 @@
+(include "widgets/reload/revealer.yuck")
+(include "widgets/reload/var.yuck")
+(defwidget workspaces [?class]
+  (box :space-evenly false
+    :class "hover-module"
+    (revealer-on-hover :class "hl-on-hover"
+      :var revealWork
+      :varname "revealWork"
+      :transition "slideup"
+      :class "workspaces"
+    (hovered-sign :var revealWork :transition "slideup"
+      
+    )
+    (eventbox
+      (box :class "module" :space-evenly "false" :orientation "h" :spacing "3"
+      (button :class "workspace_btn" :onclick "google-chrome-stable"
+        (label :text "" :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "firefox"
+        (label :text " " :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "blueberry"
+        (label :text "󰂯" :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "arduino-ide"
+        (label :text "󰂯" :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "/home/luca/.config/eww/scripts/workspaces/nmtui.sh"
+        (label :text " " :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "gparted"
+        (label :text "󰍛 " :class "workspace_label"))
+      (button :class "workspace_btn" :onclick "code"
+        (label :text "󰨞" :class "workspace_label"))))
+  )  
+    )
+  )
+        

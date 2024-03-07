@@ -1,0 +1,2 @@
+#!/bin/bbash
+kitty nmtui
